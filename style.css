@@ -1,0 +1,76 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 10vh auto 10vh;
+  grid-template-areas:
+    "aside header header header header"
+    "aside main main main main"
+    "aside footer footer footer footer";
+  min-height: 100vh;
+  gap: 10px;
+}
+header {
+  grid-area: header;
+  border: 2px solid black;
+}
+aside {
+  grid-area: aside;
+  border: 2px solid black;
+}
+main {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-areas:
+    "m-1 m-1 m-1 m-1 m-1"
+    "m-2 m-3 m-3 m-3 m-4"
+    "m-2 m-3 m-3 m-3 m-4"
+    "m-5 m-5 m-5 m-5 m-5";
+  min-height: 100%;
+  gap: 10px;
+}
+.m__1 {
+  grid-area: m-1;
+  border: 2px solid black;
+}
+.m__2 {
+  grid-area: m-2;
+  border: 2px solid black;
+}
+.m__3 {
+  grid-area: m-3;
+  border: 2px solid black;
+}
+.m__4 {
+  grid-area: m-4;
+  border: 2px solid black;
+}
+.m__5 {
+  grid-area: m-5;
+  border: 2px solid black;
+}
+footer {
+  grid-area: footer;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    "f-1 f-2"
+    "f-1 f-2";
+  min-height: 100%;
+  gap: 10px;
+}
+.f__1 {
+  grid-area: f-1;
+  border: 2px solid black;
+}
+.f__2 {
+  grid-area: f-2;
+  border: 2px solid black;
+}
